@@ -10,11 +10,18 @@ $pass=$env["DB_PASS"];
 
 class Connection {
     private static $pdo;
-    global $host, $port, $db_name, $user, $pass;
+    
 
     public static function conectar(){
+        global $host, $port, $db_name, $user, $pass;
+
         $dsn="mysql:host=$host;port=$port;dbname=$db_name";
-        self::$pdo = new PDO();
+
+        self::$pdo = new PDO($dsn, $user, $pass);
+
+        if(!isset(self::$pdo)) {
+            return self::$pdo;
+        }
     }
 }
 
