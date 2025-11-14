@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php
-        include __DIR__ . '/../../includes/bootstrap.php';
-    ?>
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../public/css/estilos.css">
+    <script src="../../public/js/bootstrap.min.js"></script>
     <title>.: Agregar :.</title>
 </head>
 <body>
+    <div class="form-page">
     <h1>Nuevo Usuario</h1>
 
     <form method="POST" action="store.php">
@@ -24,8 +25,9 @@
             <label for="inputLastName" class="form-label">LastName</label>
             <input type="text" class="form-control" id="inputLastName" name="lastname">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-usuarios">Agregar</button>
     </form>
+    </div>
 </body>
 </html>
 

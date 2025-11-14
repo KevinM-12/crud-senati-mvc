@@ -33,7 +33,7 @@ class UserModel {
         ]);
     }
 
-    public function deleteeUser($id){
+    public function deleteUser($id){
         $stmt = $this->pdo->prepare("DELETE FROM users WHERE id=:id");
 
         $stmt->execute([
